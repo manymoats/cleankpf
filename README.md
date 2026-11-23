@@ -15,7 +15,7 @@ Not yet: no contest win and no revenue. The main code is private. The research n
 | **Outside** | A third party published the result. |
 | **Try** | A live page anyone can use now, with no account. |
 | **Rerun** | Public code, run on your own machine, prints the stated result. |
-| **Recount** | Public files whose numbers anyone can recount. A match shows the file agrees with itself, not when or how the work was done. |
+| **Recount** | Public files whose numbers anyone can recount. A match shows only that the file agrees with itself. |
 | **Entered** | The contest page shows the entry and its status. The write-up on it is the author's own. |
 | **House** | Rests on the author's word alone. |
 
@@ -23,7 +23,7 @@ Not yet: no contest win and no revenue. The main code is private. The research n
 
 Entrants wrote faster versions of five pieces of the GPU code that serves Meta's Muse Spark Open model. Each submission was checked against a reference on fresh inputs and timed on an NVIDIA H200 against the open-source SGLang server's own kernel in the same run. Kernel submissions closed at the end of 2026-11-04, Pacific time. The organizers reported more than 300,000 kernel-track submissions by 2026-11-03.
 
-Board status, from the organizers' [updates page](https://openkernelchallenge.dev/updates): on 2026-11-05 they wrote that the scores on the leaderboard were not final, and on 2026-11-11 that their review of the kernel track was finished and that the leaderboard's Kernels (Overall) tab shows the final top 100 list. The author's entry is not in that top 100 list. The updates page does not say whether the per-problem boards below are final; the ranks below are those boards as they read on 2026-11-21.
+Board status, from the organizers' [updates page](https://openkernelchallenge.dev/updates): on 2026-11-05 they wrote that the scores on the leaderboard were not final, and on 2026-11-11 that their review of the kernel track was finished and that the leaderboard's Kernels (Overall) tab shows the final top 100 list. The author's entry is not in that top 100 list. The updates page does not say whether the per-problem boards below are final; the ranks below are those boards as they read on 2026-11-21, and they were the same when read again on 2026-11-23.
 
 The contest signs in only with GitHub, and the author's entry on its boards, `dogfoodarchitect`, is his GitHub account ([dogfoodarchitect on GitHub](https://github.com/dogfoodarchitect), which also holds the PatchCrowd code listed below). The contest was built for AI coding agents as well as people: its command-line tool writes an AGENTS.md file for each problem, and its rules speak to agents directly. Other entrants could use AI too.
 
@@ -97,10 +97,10 @@ Status as the contest pages read on 2026-11-23. Participant counts are the pages
 
 | Entry | Contest | Status on the contest page |
 |---|---|---|
-| [Alexa+ Agent Governance Console & MCP Server](https://devpost.com/software/alexa-autonomous-agent-governance-console-mcp-2025-11-25): an agent governance console and MCP server; the entry describes refusing attempts to tamper with the tests that judge the agent. [Walkthrough video, 171 s](https://www.youtube.com/watch?v=Fp5rXegEDLg). | [Build, Ship, Shape: Amazon Developer Hackathon](https://amazonappdev2026.devpost.com/) (35,426 participants) | "This hackathon has ended" and "Winners announced soon". The code repository the entry links to is private, so the code cannot be checked here. |
+| [Alexa+ Agent Governance Console & MCP Server](https://devpost.com/software/alexa-autonomous-agent-governance-console-mcp-2025-11-25): an agent governance console and MCP server; the entry describes refusing attempts to tamper with the tests that judge the agent. [Walkthrough video, 171 s](https://www.youtube.com/watch?v=Fp5rXegEDLg). | [Build, Ship, Shape: Amazon Developer Hackathon](https://amazonappdev2026.devpost.com/) (35,422 participants) | "This hackathon has ended" and "Winners announced soon". The code repository the entry links to is private, so the code cannot be checked here. |
 | [PatchCrowd](https://devpost.com/software/patchcrowd) · [code](https://github.com/dogfoodarchitect/patchcrowd) | [Codex x TwitchCon Hackathon](https://twitchcon-codex.devpost.com/) (2,216 participants) | "This hackathon has ended" and "View the winners". PatchCrowd is not among the five [winners](https://twitchcon-codex.devpost.com/project-gallery). |
 | [Invoice Evidence Review](https://devpost.com/software/invoice-evidence-review) | [UGREEN Hackathon on AI NAS](https://ugreenhackathon.devpost.com/) (2,794 participants) | Round 1 entry. "This hackathon has ended" and "Winners announced soon". The page says UGREEN will invite up to 30 finalists to the second round by email on 2026-11-21. The entry states that it has not been tested on a NAS. |
-| [Self-Scores Fail](https://www.kaggle.com/competitions/gemma-4-developer-agent-paper/writeups/new-writeup-1794237163374): a paper on how Gemma 4 grades its own code. By the write-up's own count, the model gave itself full marks on 370 of 371 answers, including all 84 answers that failed their checks. | Google - The Gemma 4 Developer Agent Paper Track, on Kaggle | Write-up dated 2026-11-11. The competition page gives the final submission deadline as 2026-11-12 and names no winners yet. |
+| [Self-Scores Fail](https://www.kaggle.com/competitions/gemma-4-developer-agent-paper/writeups/new-writeup-1794237163374): a paper on how Gemma 4 grades its own code. By the write-up's own count, the model gave itself full marks on 370 of 371 answers, including all 84 answers that failed their checks. | Google - The Gemma 4 Developer Agent Paper Track, on Kaggle | The write-up is public at that link. A signed-out reading of the competition page on 2026-11-23 named no winners. |
 
 No contest win so far. Entries that no contest page can show are listed under House below.
 
@@ -110,12 +110,12 @@ From 2026-09-26T03:05:45Z to 2026-09-27T14:18:08Z (35 h 12 min between the first
 
 The suite tested a browser demo in which a simulated hand slaps a soft-body model of a pair of buttocks (the record's "cheeks"), built from skin, fat, muscle and bone layers, and reports peak force, ripple speed and jiggle frequency; the model wears a painted garment in one of three cuts (cheeky, string, sport); 22 posts name the waistband, hip or crotch.
 
-- The posts are the agent's own reports, not test-runner output. The first post reports 16/16 tests passing and the last reports 62/62 tests. The posts first report 62/62 tests at the 409th loop, and the suite did not grow after that.
+- The posts are the agent's own reports. The first post reports 16/16 tests passing and the last reports 62/62 tests. The posts first report 62/62 tests at the 409th loop, and the suite did not grow after that.
 - 164 of 656 posts give a suite count with at least one failing test; the recount below finds them. Two posts from the rebuild say in words that the suite was still broken: the post for the 689th loop, which gives no count, and the post for the 692nd loop, whose count of 6/6 tests covers one part. The post for the 13th loop says that the 12th loop's post gave 23/23 tests while one of them was failing. From the 528th to the 684th loop (156 posts) one test stayed red after another agent changed a hosting configuration file outside the loop's own files; the loop left that change alone.
 - At the 685th loop the physics engine file was found replaced, from outside the loop, by a 64-line stub, and the suite dropped to 0/1 tests. The loop rebuilt the engine in the 689th to 699th loops (the posts for the 693rd, 694th, 696th and 698th loops are missing) and reported 62/62 tests again 86 minutes after the stub was found.
 - The run stopped when the model provider refused further requests (`HTTP 429`). A screenshot is in `hackathon/`.
 
-What the record does not show: the row hashes were computed when the record was exported on 2026-10-20, so a match proves only that each row agrees with its own hash, not that the rows were written in September. The engine and test code are not public, so the run itself cannot be rerun.
+What the record does not show: the row hashes were computed when the record was exported on 2026-10-20, so a match proves only that each row agrees with its own hash. It does not date the rows to September. The engine and test code are not public, so the run itself cannot be rerun.
 
 The hackathon application in `hackathon/HACKATHON-APPLICATION.md` (2026-10-13) gives larger figures than this record supports: "51 hours 35 minutes", "722 receipted iterations" and "no passing test broken". Use the record above; `hackathon/README.md` lists each correction.
 
@@ -144,21 +144,20 @@ Expected: `656`, `652`, `"suite":"16/16"`, `"suite":"62/62"`, then `656 of 656 r
 | Claim | Why it cannot be checked yet |
 |---|---|
 | The author had never written code before 2026-06-18. | Nothing public proves it. His GitHub account `brennandec` was created on 2021-05-02 and has no public repository created before 2026-07-03. |
-| Meta Global AI Developer Hackathon entry, submitted 2026-11-04: a physics agent whose code changes are accepted only by checks held outside the model. | The code is public ([repository](https://github.com/brennandec/meta-ai-hackathon-2026); its two tags, `v1.0.0` and `v1.1.0`, point at one commit), but it has no README or licence file, its launcher states that it is not standalone, and it serves interface files that are not in the repository. It does not run from a fresh copy yet. |
-| FlagOS kernel track: four tasks passed all seven chip checks when evaluated on 2026-11-12. | The organizer's portal needs an account. |
+| Meta Global AI Developer Hackathon entry: a physics agent whose code changes are accepted only by checks held outside the model. The earlier public record of this page dates a 2026-10-28 submission; release `v1.1.0` is dated 2026-11-03. | The code is public ([repository](https://github.com/brennandec/meta-ai-hackathon-2026); its two tags, `v1.0.0` and `v1.1.0`, point at one commit). It has no README or licence file, its launcher states that it is not standalone, and it serves interface files that are not in the repository. It does not run from a fresh copy yet. |
 | ARC Prize on Kaggle: the solver's rules were written by studying public ARC-AGI-2 tasks. By the author's own check its two attempts matched 237 of 259 outputs (91.5%) on the competition's public test file; on the hidden tasks behind the public leaderboard it scored zero, so the 91.5% does not show it solves new tasks. | The notebook is not public. |
 | Contract review on public contracts (below). | The run records are private. |
 | Resident State, a local runtime: built, not yet released. | No public build or recording. |
 | How the work is done (below). | The repository that would show it is private. |
 
-**Contract review on public contracts.** A local model on one Mac (Qwen3.8 27B at 4-bit precision), with outside network access blocked, answered five clause questions (governing law, cap on liability, exclusivity, non-compete, covenant not to sue) on 100 contracts drawn with a fixed seed from CUAD v1, a public set of contracts labelled by legal experts (CC BY 4.0 licence). Under a strict rule it got 331 of 500 answers right (66.2%): an answer counts only if its quoted text contains every passage the experts marked, and the 12 contracts too long for the model's input limit count as wrong. Of the 331 right answers, 215 answers said, correctly, that a clause was not present (out of 267 questions whose clause was absent); when the clause was present, the model found it 116 of 233 times (49.8%). This is not the measure the CUAD paper reports, so the two numbers do not compare. Scored on 2026-11-20.
+**Contract review on public contracts.** A local model on one Mac (Qwen3.8 27B at 4-bit precision), with outside network access blocked, answered five clause questions (governing law, cap on liability, exclusivity, non-compete, covenant not to sue) on 100 contracts drawn with a fixed seed from CUAD v1, a public set of contracts labelled by legal experts (CC BY 4.0 licence). Under a strict rule it got 331 of 500 answers right (66.2%): an answer counts only if its quoted text contains every passage the experts marked, and the 12 contracts too long for the model's input limit count as wrong. Of the 331 right answers, 215 answers said, correctly, that a clause was not present (out of 267 questions whose clause was absent); when the clause was present, the model found it 116 of 233 times (49.8%). The CUAD paper uses a different measure, so the two numbers do not compare. Scored on 2026-11-20.
 
 **How the work is done.**
 
 - The author directs; AI models from several companies write the code, some of them running on the author's own computers.
 - A gatekeeper script outside the models writes a change only if the task's checks pass, and records each file's SHA-256 hash with a receipt. When a file it is about to write already holds changes made outside it, it first commits those as found, marked "prior drift", with no check.
-- The receipts are recorded in a hash-chained log, so anyone who holds a later hash can detect a deleted or reordered entry before it. No receipt hash has been deliberately anchored outside the project yet; a few receipt files on manymoats.com show chain hashes from September 2026 log entries. The repository fingerprint under Scale covers the receipt files only as last committed, on 2026-11-13, and can be checked only once the private repository is open.
-- A model from a second company reviews each claim before it is accepted. That is AI review, not outside review.
+- The receipts are recorded in a hash-chained log, so anyone who holds a later hash can detect a deleted or reordered entry before it. No receipt hash has been deliberately anchored outside the project yet; a few receipt files on manymoats.com show chain hashes from September 2026 log entries. The repository fingerprint under Scale covers the receipt files only as last committed, on 2026-11-13, and can be checked only once the private repository is open. The version of this page committed on 2026-11-15 recorded that the live integrity checks on this log had failed since 2026-09-29, with 3 receipt rows missing and the cause not established, and that nine private test suites failed when rerun that day. This page has no later check of those findings.
+- A model from a second company reviews each claim before it is accepted. That review is itself by an AI model.
 
 ## What would show a row is wrong
 
@@ -173,7 +172,7 @@ Expected: `656`, `652`, `"suite":"16/16"`, `"suite":"62/62"`, then `656 of 656 r
 
 ## Scale (House; kept last on purpose)
 
-At commit `2766acb5b7d8cb942d8749ece029211a4e5e54af` of the private repository, committed on 2026-11-21 at 13:27 UTC, the repository held 141,205 commits and 151,399 files, with 6,374,166 lines in code-type files. These numbers rest on the author's word, and they measure volume, not quality: 139,700 commits (98.9%) are automatic, made by the gatekeeper script, and 40,017 commits among them record changes made outside it as found. Each number counts exactly this:
+At commit `2766acb5b7d8cb942d8749ece029211a4e5e54af` of the private repository, committed on 2026-11-21 at 13:27 UTC, the repository held 141,205 commits and 151,399 files, with 6,374,166 lines in code-type files. These numbers rest on the author's word, and they measure volume: 139,700 commits (98.9%) are automatic, made by the gatekeeper script, and 40,017 commits among them record changes made outside it as found. Each number counts exactly this:
 
 | Number | What it counts |
 |---|---|
@@ -181,7 +180,7 @@ At commit `2766acb5b7d8cb942d8749ece029211a4e5e54af` of the private repository, 
 | 139,700 automatic commits | commits whose subject starts with `door wo_`, the prefix the gatekeeper script gives its commits |
 | 40,017 drift commits | gatekeeper commits whose subject continues `: prior drift` after the work-order id: changes made outside the gatekeeper that it committed as found, unchecked, before its own write |
 | 151,399 files | every path tracked at that commit, of any type |
-| 6,374,166 lines in code-type files | newline characters in the 18,007 tracked files whose names end in .mjs, .js, .ts, .tsx, .jsx, .py, .swift, .c, .h, .m, .mm, .css, .scss, .html, .sh, .rs or .go. A symlink counts as the file it points to; one points to a path outside the repository that did not exist on the counting machine, and counted zero. The files include copied third-party libraries, generated pages and files saved with run records, not only code written for the products. About 56% of these lines are in files saved with run records. |
+| 6,374,166 lines in code-type files | newline characters in the 18,007 tracked files whose names end in .mjs, .js, .ts, .tsx, .jsx, .py, .swift, .c, .h, .m, .mm, .css, .scss, .html, .sh, .rs or .go. A symlink counts as the file it points to; one points to a path outside the repository that did not exist on the counting machine, and counted zero. The files include copied third-party libraries, generated pages, files saved with run records, and code written for the products. About 56% of these lines are in files saved with run records. |
 
 Fingerprint: the commit hash above, and `d1f4fdb1ed8c383ef3fc0eedcae8fb9c45fdd6d9bb28351edf935bd48635bc46`, the SHA-256 of the list of files tracked at that commit. GitHub's record of the push that added this page dates both: the counts existed no later than that push. Anyone later given the private repository can recount in a clean checkout of that commit:
 
@@ -201,10 +200,10 @@ The previous version of this page gave 139,610 commits, 150,919 files and 6,353,
 
 ## Corrections since the previous version
 
-- Kernel board sizes now leave out the SGLang reference row (1,379 teams, not 1,380 entries), and "faster than the SGLang baseline", which every team is, is replaced by rank and the median team.
+- Kernel board sizes now leave out the SGLang reference row (1,379 teams; the earlier page counted 1,380 entries, which included that reference row), and "faster than the SGLang baseline", which every team is, is replaced by rank and the median team.
 - The September run moved from Rerun to Recount: its engine and tests are not public, so it cannot be rerun.
 - The Meta hackathon code moved from Rerun to House: it does not run from a fresh copy.
-- The Alexa+ entry moved from Outside to Entered: a contest listing shows the author's own write-up, not a third party's result.
+- The Alexa+ entry moved from Outside to Entered: a contest listing shows the author's own write-up.
 - The October gate runs in `hackathon/` were described as runs of a local model. Three of the four used pre-written proposals and called no model; `hackathon/README.md` now says so.
 - Removed: "one commit per file" for the gatekeeper script, which was wrong (of its 139,700 commits, 8,808 commits change more than one file), and "File changes go through one gatekeeper", which left out the 40,017 commits in which it records changes made outside it.
 - Removed: "about 1,400 commits a day" and "more than 8 million lines at the peak", which had no public check.
