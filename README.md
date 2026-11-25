@@ -8,6 +8,18 @@ This repository is the public record of software one person builds by directing 
 
 Not yet: no contest win and no revenue. The main code is private. The research notes on manymoats.com are being withdrawn for correction; nothing on this page rests on them.
 
+## Verified programs
+
+Manymoats llc has been reviewed and accepted into:
+
+- **Microsoft for Startups** — business verification approved
+  2026-11-24; $5,000 in Azure startup credits.
+- **AWS Activate** — approved 2026-11-06; $1,100 in AWS
+  credits across two credits.
+
+Program credits are not investment. Manymoats llc has raised no
+outside capital; it is bootstrapped by its founder, Brennan DeCrow.
+
 ## How each result is marked
 
 | Mark | Meaning |
