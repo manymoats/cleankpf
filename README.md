@@ -1,26 +1,30 @@
 # manymoats
 
+This repository is the public record of an AI-orchestrated engineering harness with a deterministic external verification pipeline: one person directs AI models that write the code, and each result below names a check that runs outside the models, or says that it rests on the author's word. The technical thesis under test is that keeping working data resident in binary form, instead of converting it to text and back (serialization), removes that conversion cost, and the research argument carries the idea through four models: memory, communication, energy and facility water. One piece has a public test, a browser benchmark that measures processing time on your own device; binary typed arrays are established tools, the energy and water figures are scenario models, and the research notes that argue the larger case are being withdrawn for correction.
+
+## Quick machine verification
+
+- `audit-manifest.json`: every result on this page as JSON, each with its mark.
+- `verify-public-record.mjs`: needs Node.js v18 or later and no packages. It re-reads the five organizer boards below, checks that two manymoats.com pages answer as stated (Battlegrounds, and the research notes page, which reads "Withdrawn"), and recounts the September record's 656 row hashes and its counts.
+
+```
+git clone https://github.com/manymoats/cleankpf && cd cleankpf
+node verify-public-record.mjs
+```
+
+Expected last line: `RESULT: PASS (54 of 54 checks)`. Each FAIL line names the check, the expected value and the value found. House results have no machine check, and the script does not run the interactive tests.
+
+## In brief
+
 One person, who by his own account directs AI models that write the code, has an entry in the top 4.4% to 17% of about 900 to 1,700 teams on each of the five per-problem boards of a GPU-code speed contest; the organizers' final overall top 100 list does not include it.
 
 In the Open Kernel Challenge, a public contest to make the GPU code behind Meta's Muse Spark Open model run faster on NVIDIA H200 chips, the organizers' boards rank the author's entry 61st of 1,379 teams on gated attention decode (top 4.4%) and inside the top 17% on all five problems, faster than the median team each time. No top-10 place.
 
-This repository is the public record of software one person builds by directing AI models that write the code, written for anyone who wants to check that work before relying on it. Each result below is marked with how it can be checked.
-
 Not yet: no contest win and no revenue. The main code is private. The research notes on manymoats.com are being withdrawn for correction; nothing on this page rests on them.
 
-## Verified programs
-
-Manymoats llc has been reviewed and accepted into:
-
-- **Microsoft for Startups** — business verification approved
-  2026-11-24; $5,000 in Azure startup credits.
-- **AWS Activate** — approved 2026-11-06; $1,100 in AWS
-  credits across two credits.
-
-Program credits are not investment. Manymoats llc has raised no
-outside capital; it is bootstrapped by its founder, Brennan DeCrow.
-
 ## How each result is marked
+
+This repository is the public record of software one person builds by directing AI models that write the code, written for anyone who wants to check that work before relying on it. Each result below is marked with how it can be checked.
 
 | Mark | Meaning |
 |---|---|
@@ -30,6 +34,8 @@ outside capital; it is bootstrapped by its founder, Brennan DeCrow.
 | **Recount** | Public files whose numbers anyone can recount. A match shows only that the file agrees with itself. |
 | **Entered** | The contest page shows the entry and its status. The write-up on it is the author's own. |
 | **House** | Rests on the author's word alone. |
+
+The sections below run from the strongest check to the weakest: Outside, Try and Rerun, Entered, Recount, House and Scale; then what would show a row is wrong, and the changes.
 
 ## Outside: Open Kernel Challenge, kernel track
 
@@ -56,6 +62,7 @@ To check without code: open a board link. The board starts with 10 rows, and eac
 | What | Mark | Links | What you should see |
 |---|---|---|---|
 | **Import Repair.** An AI model may only propose how a supplier's catalog columns map to product fields. A separate check, with no model in it, converts every price to whole cents or refuses the whole batch. | Try · Rerun | [live demo](https://brennandec.github.io/import-repair/) · [code](https://github.com/brennandec/import-repair) | The demo opens with the preset `base-repair` chosen. Click **Execute Ingestion Contract**: `ACCEPTED — 2 ROWS VERIFIED`, with $12.50 stored as `1250` cents. Choose the preset `subcent-refusal`, whose price is 1.005 dollars, and click it again: `REFUSED — ZERO PARTIAL ROWS ACCEPTED`, refusal code `INVALID_PRICE_PRECISION`, no partial rows kept. **Suggest Mapping (Nemotron)** needs a server and an API key that the public page does not have, so there it shows `MAPPING REQUEST FAILED`. |
+| **Battlegrounds.** Two tests in the browser of the thesis above. A cellular field evolves in two workers: one sends its state through JSON text at every step, the other updates resident typed arrays, and checksums confirm that both reach the same state. A 3D Gaussian scene of up to 131,078 points is deformed the same way in two linked views. | Try | [live page](https://manymoats.com/battlegrounds) | Press **Run comparison** under either test: the page reports what it measured on your device in that session, so results differ by device. By the page's own words it measures processing time in this browser and does not measure battery life, electricity or water use; binary data and typed arrays are established tools; and its energy and water calculator ("Projected Enterprise Scale") is a scenario model, not measured water saved. The page also maps the research notes that are being withdrawn for correction; nothing on this page rests on them. |
 
 The demo page's footer names the Nebius × NVIDIA hackathon that Import Repair was built for. By the author's record, no entry was filed there.
 
@@ -159,8 +166,19 @@ Expected: `656`, `652`, `"suite":"16/16"`, `"suite":"62/62"`, then `656 of 656 r
 | Meta Global AI Developer Hackathon entry: a physics agent whose code changes are accepted only by checks held outside the model. The earlier public record of this page dates a 2026-10-28 submission; release `v1.1.0` is dated 2026-11-03. | The code is public ([repository](https://github.com/brennandec/meta-ai-hackathon-2026); its two tags, `v1.0.0` and `v1.1.0`, point at one commit). It has no README or licence file, its launcher states that it is not standalone, and it serves interface files that are not in the repository. It does not run from a fresh copy yet. |
 | ARC Prize on Kaggle: the solver's rules were written by studying public ARC-AGI-2 tasks. By the author's own check its two attempts matched 237 of 259 outputs (91.5%) on the competition's public test file; on the hidden tasks behind the public leaderboard it scored zero, so the 91.5% does not show it solves new tasks. | The notebook is not public. |
 | Contract review on public contracts (below). | The run records are private. |
-| Resident State, a local runtime: built, not yet released. | No public build or recording. |
+| Resident State, a local runtime: built, not yet released. The idea it rests on, keeping working data in binary form instead of converting it to text, has a browser test anyone can run: [Battlegrounds](https://manymoats.com/battlegrounds) (Try, above). That page tests the idea, not the runtime. | No public build or recording. |
+| Verified programs (below). | No public page shows the acceptances. |
 | How the work is done (below). | The repository that would show it is private. |
+
+**Verified programs.** Manymoats llc has been reviewed and accepted into:
+
+- **Microsoft for Startups** — business verification approved
+  2026-11-24; $5,000 in Azure startup credits.
+- **AWS Activate** — approved 2026-11-06; $1,100 in AWS
+  credits across two credits.
+
+Program credits are not investment. Manymoats llc has raised no
+outside capital; it is bootstrapped by its founder, Brennan DeCrow.
 
 **Contract review on public contracts.** A local model on one Mac (Qwen3.8 27B at 4-bit precision), with outside network access blocked, answered five clause questions (governing law, cap on liability, exclusivity, non-compete, covenant not to sue) on 100 contracts drawn with a fixed seed from CUAD v1, a public set of contracts labelled by legal experts (CC BY 4.0 licence). Under a strict rule it got 331 of 500 answers right (66.2%): an answer counts only if its quoted text contains every passage the experts marked, and the 12 contracts too long for the model's input limit count as wrong. Of the 331 right answers, 215 answers said, correctly, that a clause was not present (out of 267 questions whose clause was absent); when the clause was present, the model found it 116 of 233 times (49.8%). The CUAD paper uses a different measure, so the two numbers do not compare. Scored on 2026-11-20.
 
@@ -171,18 +189,7 @@ Expected: `656`, `652`, `"suite":"16/16"`, `"suite":"62/62"`, then `656 of 656 r
 - The receipts are recorded in a hash-chained log, so anyone who holds a later hash can detect a deleted or reordered entry before it. No receipt hash has been deliberately anchored outside the project yet; a few receipt files on manymoats.com show chain hashes from September 2026 log entries. The repository fingerprint under Scale covers the receipt files only as last committed, on 2026-11-13, and can be checked only once the private repository is open. The version of this page committed on 2026-11-15 recorded that the live integrity checks on this log had failed since 2026-09-29, with 3 receipt rows missing and the cause not established, and that nine private test suites failed when rerun that day. This page has no later check of those findings.
 - A model from a second company reviews each claim before it is accepted. That review is itself by an AI model.
 
-## What would show a row is wrong
-
-| Claim | It is wrong if |
-|---|---|
-| Kernel ranks | the organizer's board or data shows `dogfoodarchitect` at other places, or not at all |
-| Entered rows | the contest pages show a different status |
-| Import Repair | the demo accepts a price with a fraction of a cent, or `node verify-stage.mjs` prints anything else on a fresh copy |
-| September run | the recount commands print anything else |
-| House rows | a later public record contradicts them |
-| Scale counts | the private repository, once open, has no commit `2766acb5b7d8`, or the commands under Scale print other values in a clean checkout of it |
-
-## Scale (House; kept last on purpose)
+## Scale (House; last of the claims on purpose)
 
 At commit `2766acb5b7d8cb942d8749ece029211a4e5e54af` of the private repository, committed on 2026-11-21 at 13:27 UTC, the repository held 141,205 commits and 151,399 files, with 6,374,166 lines in code-type files. These numbers rest on the author's word, and they measure volume: 139,700 commits (98.9%) are automatic, made by the gatekeeper script, and 40,017 commits among them record changes made outside it as found. Each number counts exactly this:
 
@@ -210,7 +217,29 @@ Expected: the two hashes above, then `141205`, `139700`, `40017`, `151399` and `
 
 The previous version of this page gave 139,610 commits, 150,919 files and 6,353,123 lines for 2026-11-20, counted the same way at an earlier commit, with no fingerprint.
 
-## Corrections since the previous version
+## What would show a row is wrong
+
+| Claim | It is wrong if |
+|---|---|
+| Machine verification | `node verify-public-record.mjs` prints a FAIL line on a fresh copy with network access |
+| Kernel ranks | the organizer's board or data shows `dogfoodarchitect` at other places, or not at all |
+| Entered rows | the contest pages show a different status |
+| Import Repair | the demo accepts a price with a fraction of a cent, or `node verify-stage.mjs` prints anything else on a fresh copy |
+| Battlegrounds | the page does not load, or **Run comparison** does not run both paths to the same checksum |
+| September run | the recount commands print anything else |
+| House rows | a later public record contradicts them |
+| Scale counts | the private repository, once open, has no commit `2766acb5b7d8`, or the commands under Scale print other values in a clean checkout of it |
+
+## Changes
+
+### In this version
+
+- The page is reordered for a reader with no context: a three-sentence summary, a quick machine verification, then sections from the strongest check to the weakest. No figure is changed.
+- New files: `audit-manifest.json` (every result as JSON, each with its mark), `verify-public-record.mjs` (the checker) and `llms.txt` (an index for language-model crawlers).
+- Verified programs moved from the top of the page to House, because no public page shows the acceptances.
+- Added Battlegrounds as a Try row, and linked it from the Resident State row under House.
+
+### Corrections listed in the version of 2026-11-25
 
 - Kernel board sizes now leave out the SGLang reference row (1,379 teams; the earlier page counted 1,380 entries, which included that reference row), and "faster than the SGLang baseline", which every team is, is replaced by rank and the median team.
 - The September run moved from Rerun to Recount: its engine and tests are not public, so it cannot be rerun.
@@ -225,6 +254,7 @@ Earlier versions of this page remain in the commit history. Figures they carry t
 ## More
 
 - `hackathon/`: the September run record, the October gate runs and the hackathon application as submitted on 2026-10-13, with a guide to checking each file.
+- `llms.txt`: an index of this record for language-model crawlers, grouped by mark.
 - Earlier copy of this repository: [brennandec/cleankpf](https://github.com/brennandec/cleankpf), now a move notice with its history kept.
 - Accounts used by the author: GitHub `manymoats`, `brennandec` and `dogfoodarchitect`; Devpost `dogfoodarchitect`; YouTube [@manymoats](https://www.youtube.com/@manymoats).
 - Site (House): [manymoats.com](https://manymoats.com), a 3D hub of 21 named destinations. It does not yet link to this record.

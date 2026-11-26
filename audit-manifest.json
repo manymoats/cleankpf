@@ -1,0 +1,328 @@
+{
+  "schema": "manymoats.cleankpf.audit-manifest/1",
+  "reference_class": "AI-orchestrated engineering harness and deterministic external verification pipeline",
+  "how_to_use": {
+    "readme": "README.md",
+    "checker": "verify-public-record.mjs",
+    "checker_command": "node verify-public-record.mjs",
+    "checker_requires": "Node.js v18 or later, network access, no dependencies",
+    "checker_scope": "Re-reads the five organizer boards, checks two manymoats.com pages, recounts the September record's row hashes and counts. House entries have no machine check.",
+    "each_entry_carries": "a mark from the table below; the mark says how the entry can be checked"
+  },
+  "marks": {
+    "Outside": "A third party published the result.",
+    "Try": "A live page anyone can use now, with no account.",
+    "Rerun": "Public code, run on your own machine, prints the stated result.",
+    "Recount": "Public files whose numbers anyone can recount. A match shows only that the file agrees with itself.",
+    "Entered": "The contest page shows the entry and its status. The write-up on it is the author's own.",
+    "House": "Rests on the author's word alone."
+  },
+  "operator": {
+    "name": "Brennan DeCrow",
+    "entity": "Manymoats LLC",
+    "coding_start_date": "2026-06-18",
+    "prior_coding_experience": "none",
+    "mark": "House",
+    "readme_claim": "The author had never written code before 2026-06-18.",
+    "why_it_cannot_be_checked": "Nothing public proves it. His GitHub account brennandec was created on 2021-05-02 and has no public repository created before 2026-07-03.",
+    "working_method": "The author directs; AI models from several companies write the code, some of them running on the author's own computers."
+  },
+  "verified_external_benchmarks": [
+    {
+      "board_id": "muse_attention_decode",
+      "problem": "Gated attention decode",
+      "team": "dogfoodarchitect",
+      "mark": "Outside",
+      "rank": 61,
+      "total_teams": 1379,
+      "percentile": "top 4.4%",
+      "speedup_vs_sglang": 2.79,
+      "median_team_speedup": 1.91,
+      "first_place_speedup": 3.34,
+      "live_api_url": "https://openkernelchallenge.dev/api/leaderboard/muse_attention_decode",
+      "board_url": "https://openkernelchallenge.dev/leaderboard?problem=muse_attention_decode"
+    },
+    {
+      "board_id": "muse_prefill_layer",
+      "problem": "Prefill layer",
+      "team": "dogfoodarchitect",
+      "mark": "Outside",
+      "rank": 84,
+      "total_teams": 895,
+      "percentile": "top 9.4%",
+      "speedup_vs_sglang": 1.92,
+      "median_team_speedup": 1.60,
+      "first_place_speedup": 2.15,
+      "live_api_url": "https://openkernelchallenge.dev/api/leaderboard/muse_prefill_layer",
+      "board_url": "https://openkernelchallenge.dev/leaderboard?problem=muse_prefill_layer"
+    },
+    {
+      "board_id": "muse_bf16_proj",
+      "problem": "Dense projections (BF16)",
+      "team": "dogfoodarchitect",
+      "mark": "Outside",
+      "rank": 136,
+      "total_teams": 1740,
+      "percentile": "top 7.8%",
+      "speedup_vs_sglang": 1.58,
+      "median_team_speedup": 1.25,
+      "first_place_speedup": 1.73,
+      "live_api_url": "https://openkernelchallenge.dev/api/leaderboard/muse_bf16_proj",
+      "board_url": "https://openkernelchallenge.dev/leaderboard?problem=muse_bf16_proj"
+    },
+    {
+      "board_id": "muse_moe_w4a16",
+      "problem": "Routed experts (MoE)",
+      "team": "dogfoodarchitect",
+      "mark": "Outside",
+      "rank": 189,
+      "total_teams": 1422,
+      "percentile": "top 13.3%",
+      "speedup_vs_sglang": 2.40,
+      "median_team_speedup": 1.91,
+      "first_place_speedup": 2.84,
+      "live_api_url": "https://openkernelchallenge.dev/api/leaderboard/muse_moe_w4a16",
+      "board_url": "https://openkernelchallenge.dev/leaderboard?problem=muse_moe_w4a16"
+    },
+    {
+      "board_id": "muse_decode_layer",
+      "problem": "Whole decoder layer",
+      "team": "dogfoodarchitect",
+      "mark": "Outside",
+      "rank": 220,
+      "total_teams": 1296,
+      "percentile": "top 17.0%",
+      "speedup_vs_sglang": 2.26,
+      "median_team_speedup": 1.78,
+      "first_place_speedup": 2.61,
+      "live_api_url": "https://openkernelchallenge.dev/api/leaderboard/muse_decode_layer",
+      "board_url": "https://openkernelchallenge.dev/leaderboard?problem=muse_decode_layer"
+    }
+  ],
+  "external_benchmark_context": {
+    "contest": "Open Kernel Challenge, kernel track",
+    "task": "Entrants wrote faster versions of five pieces of the GPU code that serves Meta's Muse Spark Open model. Each submission was checked against a reference on fresh inputs and timed on an NVIDIA H200 against the open-source SGLang server's own kernel in the same run.",
+    "organizer_updates_url": "https://openkernelchallenge.dev/updates",
+    "kernel_submissions_closed": "end of 2026-11-04, Pacific time",
+    "organizer_reported_submissions": "more than 300,000 kernel-track submissions by 2026-11-03",
+    "in_final_overall_top_100": false,
+    "top_10_place": false,
+    "kernel_track_prize_money": false,
+    "ranks_as_read_on": ["2026-11-21", "2026-11-23"],
+    "field_definitions": {
+      "rank": "position of team dogfoodarchitect on the organizer's per-problem board, with the SGLang reference row left out",
+      "total_teams": "teams on the board, with the SGLang reference row left out",
+      "percentile": "rank divided by total_teams, as a percentage with one decimal: the share of teams at or above this entry",
+      "speedup_vs_sglang": "how many times as fast as SGLang's own kernel the entry ran, in the same timed run",
+      "median_team_speedup": "median speedup of all teams on the board, SGLang row left out",
+      "first_place_speedup": "speedup of the first row on the board"
+    },
+    "caveats": [
+      "On 2026-11-05 the organizers wrote that the scores on the leaderboard were not final; on 2026-11-11 they wrote that their review of the kernel track was finished and that the Kernels (Overall) tab shows the final top 100 list. The author's entry is not in that top 100 list.",
+      "The updates page does not say whether the per-problem boards are final.",
+      "Every team on every board beats the SGLang reference, so rank and the median team are the comparisons that matter.",
+      "The kernel track carried no prize money; the contest pays its prizes on a separate serving track.",
+      "The contest was built for AI coding agents as well as people. Other entrants could use AI too.",
+      "The board entry dogfoodarchitect is the author's GitHub account."
+    ]
+  },
+  "verified_programs": [
+    {
+      "program": "Microsoft for Startups",
+      "status": "business verification approved",
+      "approved_on": "2026-11-24",
+      "credits_usd": 5000,
+      "credit_type": "Azure startup credits",
+      "mark": "House"
+    },
+    {
+      "program": "AWS Activate",
+      "status": "approved",
+      "approved_on": "2026-11-06",
+      "credits_usd": 1100,
+      "credit_type": "AWS credits, across two credits",
+      "mark": "House"
+    }
+  ],
+  "verified_programs_notes": [
+    "No public page shows these acceptances; they rest on the author's word.",
+    "Program credits are not investment.",
+    "Manymoats llc has raised no outside capital; it is bootstrapped by its founder."
+  ],
+  "live_interactive_demos": {
+    "battlegrounds": {
+      "url": "https://manymoats.com/battlegrounds",
+      "mark": "Try",
+      "tests": ["cellular_field_binary_vs_json", "131078_point_3d_gaussian_scene"],
+      "test_descriptions": {
+        "cellular_field_binary_vs_json": "Two workers evolve an identical cellular field. One round-trips the state through JSON at every step; the other updates resident typed arrays. Checksums verify both paths produced the same logical state. Field size from 64 x 64 to 1024 x 1024 cells.",
+        "131078_point_3d_gaussian_scene": "A 3D Gaussian scene with linked cameras and equal deformation work in two views. Choose 32,768, 65,536 or the full 131,078 Gaussians. Worker processing is reported separately from presented updates."
+      },
+      "explicit_caveats": [
+        "binary typed arrays are established tools",
+        "measures browser processing time only",
+        "enterprise energy/water output is a scenario model"
+      ],
+      "page_quotes": [
+        "Binary data and typed arrays are established tools.",
+        "The comparison measures processing time in this browser.",
+        "They do not measure battery life, electricity, or water use.",
+        "This is a scenario model, not measured water saved."
+      ],
+      "results": "Measured on the visitor's own device in that session; they differ by device.",
+      "also_on_the_page": "A map of the research notes, which are being withdrawn for correction. Nothing in this record rests on them.",
+      "machine_check": "verify-public-record.mjs checks that the page answers HTTP 200 and still carries the four page_quotes. It does not run the tests."
+    },
+    "import_repair": {
+      "repo": "https://github.com/brennandec/import-repair",
+      "live_demo": "https://brennandec.github.io/import-repair/",
+      "mark": ["Try", "Rerun"],
+      "verification_cmd": "node verify-stage.mjs",
+      "verification_expected_output": "ALL 7 FILES VERIFIED (0 secrets detected, clone=pass)",
+      "behavior": "deterministic sub-cent refusal without LLM in validation loop",
+      "behavior_detail": "An AI model may only propose how a supplier's catalog columns map to product fields. A separate check, with no model in it, converts every price to whole cents or refuses the whole batch.",
+      "demo_expected": [
+        "Preset base-repair, Execute Ingestion Contract: ACCEPTED — 2 ROWS VERIFIED, with $12.50 stored as 1250 cents.",
+        "Preset subcent-refusal (price 1.005 dollars): REFUSED — ZERO PARTIAL ROWS ACCEPTED, refusal code INVALID_PRICE_PRECISION, no partial rows kept.",
+        "Suggest Mapping (Nemotron) needs a server and an API key that the public page does not have, so there it shows MAPPING REQUEST FAILED."
+      ],
+      "caveats": [
+        "The demo page's footer names the Nebius × NVIDIA hackathon that Import Repair was built for. By the author's record, no entry was filed there."
+      ],
+      "machine_check": "Not run by verify-public-record.mjs. Clone the repository and run node verify-stage.mjs."
+    }
+  },
+  "autonomous_telemetry_and_scale": {
+    "september_run": {
+      "mark": "Recount",
+      "record_file": "hackathon/loop-record-2026-09.public.jsonl",
+      "record_file_sha256": "fa21e76aa0f30275c4db4bcf127a6500824e3b12b152e1f4013bf1714bd65d5f",
+      "summary_file": "hackathon/loop-record-2026-09.summary.json",
+      "first_post_utc": "2026-09-26T03:05:45Z",
+      "last_post_utc": "2026-09-27T14:18:08Z",
+      "duration": "35 h 12 min between the first and last recorded post",
+      "posts": 656,
+      "distinct_loop_numbers": 652,
+      "loop_numbers_in_range": 722,
+      "missing_loop_numbers": 70,
+      "duplicate_loop_numbers": 4,
+      "rows_matching_own_hash": 656,
+      "posts_with_failing_test": 164,
+      "first_suite": "16/16",
+      "last_suite": "62/62",
+      "first_62_of_62_at_loop": 409,
+      "red_test_stretch": {
+        "from_loop": 528,
+        "to_loop": 684,
+        "posts": 156,
+        "cause": "another agent changed a hosting configuration file outside the loop's own files; the loop left that change alone"
+      },
+      "stub_event": {
+        "loop": 685,
+        "found": "the physics engine file replaced, from outside the loop, by a 64-line stub",
+        "suite_after_stub": "0/1",
+        "rebuild_loops": "689 to 699",
+        "rebuild_posts_missing": [693, 694, 696, 698],
+        "minutes_until_62_of_62_again": 86
+      },
+      "stop_cause": "the model provider refused further requests (HTTP 429)",
+      "row_hash_rule": "sha256 of each row's public_block_text equals its public_block_sha256; block_sha256 points at the private raw record and cannot be checked publicly",
+      "caveats": [
+        "The posts are the agent's own reports.",
+        "The row hashes were computed when the record was exported on 2026-10-20, so a match proves only that each row agrees with its own hash. It does not date the rows to September.",
+        "The engine and test code are not public, so the run itself cannot be rerun.",
+        "The hackathon application in hackathon/HACKATHON-APPLICATION.md (2026-10-13) gives larger figures than this record supports: \"51 hours 35 minutes\", \"722 receipted iterations\" and \"no passing test broken\". Use the record; hackathon/README.md lists each correction."
+      ]
+    },
+    "scale": {
+      "mark": "House",
+      "commit": "2766acb5b7d8cb942d8749ece029211a4e5e54af",
+      "committed_utc": "2026-11-21 13:27",
+      "tracked_file_list_sha256": "d1f4fdb1ed8c383ef3fc0eedcae8fb9c45fdd6d9bb28351edf935bd48635bc46",
+      "commits_total": 141205,
+      "commits_automatic": 139700,
+      "commits_automatic_percent": 98.9,
+      "commits_prior_drift": 40017,
+      "commits_automatic_changing_more_than_one_file": 8808,
+      "files_tracked": 151399,
+      "code_type_files": 18007,
+      "code_type_lines": 6374166,
+      "code_type_extensions": [".mjs", ".js", ".ts", ".tsx", ".jsx", ".py", ".swift", ".c", ".h", ".m", ".mm", ".css", ".scss", ".html", ".sh", ".rs", ".go"],
+      "lines_in_files_saved_with_run_records": "about 56%",
+      "previous_count": {
+        "date": "2026-11-20",
+        "commits_total": 139610,
+        "files_tracked": 150919,
+        "code_type_lines": 6353123,
+        "fingerprint": "none"
+      },
+      "recount_commands_in_a_clean_checkout_of_that_commit": [
+        "git rev-parse HEAD",
+        "git -c core.quotePath=true ls-files | shasum -a 256",
+        "git rev-list --count HEAD",
+        "git log --format=%s HEAD | grep -c '^door wo_'",
+        "git log --format=%s HEAD | grep -c '^door wo_[0-9a-f]*: prior drift'",
+        "git ls-files | wc -l",
+        "git ls-files -z -- '*.mjs' '*.js' '*.ts' '*.tsx' '*.jsx' '*.py' '*.swift' '*.c' '*.h' '*.m' '*.mm' '*.css' '*.scss' '*.html' '*.sh' '*.rs' '*.go' | xargs -0 cat | wc -l"
+      ],
+      "caveats": [
+        "These numbers rest on the author's word, and they measure volume.",
+        "The repository is private; the counts can be checked only once it is open.",
+        "The files include copied third-party libraries, generated pages, files saved with run records, and code written for the products.",
+        "A symlink counts as the file it points to; one points to a path outside the repository that did not exist on the counting machine, and counted zero.",
+        "GitHub's record of the push that added the fingerprint dates it: the counts existed no later than that push."
+      ]
+    },
+    "receipt_log": {
+      "mark": "House",
+      "source": "the version of README.md committed on 2026-11-15",
+      "live_integrity_checks_failing_since": "2026-09-29",
+      "missing_receipt_rows": 3,
+      "missing_rows_cause": "not established",
+      "private_test_suites_failed_on_rerun_that_day": 9,
+      "later_check": "none in this record",
+      "external_anchor": "No receipt hash has been deliberately anchored outside the project yet."
+    }
+  },
+  "commercial_and_public_status": {
+    "revenue_usd": 0,
+    "contest_wins": 0,
+    "papers_status": "being withdrawn for correction",
+    "papers_index_url": "https://manymoats.com/papers",
+    "papers_index_shows": "Withdrawn",
+    "papers_note": "Nothing in this record rests on the research notes. The research map on https://manymoats.com/battlegrounds still loads its files from /papers/research/.",
+    "core_runtime_repo": "private",
+    "resident_state": "built, not yet released; no public build or recording",
+    "site": "https://manymoats.com, a 3D hub of 21 named destinations; it does not yet link to this record"
+  },
+  "page_checks": [
+    {
+      "id": "battlegrounds",
+      "url": "https://manymoats.com/battlegrounds",
+      "expect_status": 200,
+      "expect_text": [
+        "Binary data and typed arrays are established tools.",
+        "The comparison measures processing time in this browser.",
+        "They do not measure battery life, electricity, or water use.",
+        "This is a scenario model, not measured water saved."
+      ]
+    },
+    {
+      "id": "papers",
+      "url": "https://manymoats.com/papers",
+      "expect_status": 200,
+      "expect_text": ["Withdrawn"]
+    }
+  ],
+  "not_machine_checked": [
+    "operator",
+    "verified_programs",
+    "autonomous_telemetry_and_scale.scale",
+    "autonomous_telemetry_and_scale.receipt_log",
+    "commercial_and_public_status",
+    "the interactive tests on battlegrounds",
+    "import_repair (run its own node verify-stage.mjs)",
+    "contest entries marked Entered (read the contest pages)"
+  ],
+  "license": "MIT, in LICENSE"
+}

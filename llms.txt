@@ -1,0 +1,38 @@
+# manymoats public record
+
+> The public record of an AI-orchestrated engineering harness with a deterministic external verification pipeline: one person directs AI models that write the code, and every result carries a mark that says how it can be checked (Outside, Try, Rerun, Entered, Recount, House). No contest win and no revenue; the main code is private.
+
+Start with the manifest and its checker: `node verify-public-record.mjs` (Node.js v18 or later, no packages) re-reads the five organizer boards, checks two manymoats.com pages and recounts the September record. House results have no machine check. Sections below run from the strongest check to the weakest. The full page is the [README](https://github.com/manymoats/cleankpf/blob/main/README.md); the licence is MIT.
+
+## Outside
+
+- [Gated attention decode, organizer data](https://openkernelchallenge.dev/api/leaderboard/muse_attention_decode): Open Kernel Challenge board; team dogfoodarchitect 61st of 1,379 teams (top 4.4%); 2.79 times as fast as SGLang's own kernel, median team 1.91 times
+- [Prefill layer, organizer data](https://openkernelchallenge.dev/api/leaderboard/muse_prefill_layer): 84th of 895 teams (top 9.4%); 1.92 times, median team 1.60 times
+- [Dense projections (BF16), organizer data](https://openkernelchallenge.dev/api/leaderboard/muse_bf16_proj): 136th of 1,740 teams (top 7.8%); 1.58 times, median team 1.25 times
+- [Routed experts (MoE), organizer data](https://openkernelchallenge.dev/api/leaderboard/muse_moe_w4a16): 189th of 1,422 teams (top 13.3%); 2.40 times, median team 1.91 times
+- [Whole decoder layer, organizer data](https://openkernelchallenge.dev/api/leaderboard/muse_decode_layer): 220th of 1,296 teams (top 17.0%); 2.26 times, median team 1.78 times
+- [Organizer updates](https://openkernelchallenge.dev/updates): the final overall top 100 list does not include this entry; no top-10 place; every team on every board beats the SGLang reference, so rank and the median team are the comparisons that matter; the kernel track carried no prize money
+
+## Try
+
+- [Battlegrounds](https://manymoats.com/battlegrounds): two browser tests, a cellular field sent through JSON text against one kept in resident typed arrays, and a 3D Gaussian scene of up to 131,078 points; it measures processing time in the browser only; binary typed arrays are established tools; its energy and water calculator is a scenario model, not measured water saved
+- [Import Repair live demo](https://brennandec.github.io/import-repair/): a check with no model in it converts every price to whole cents or refuses the whole batch; a price of 1.005 dollars is refused with no partial rows kept
+
+## Rerun
+
+- [verify-public-record.mjs](https://github.com/manymoats/cleankpf/blob/main/verify-public-record.mjs): the checker; expected last line `RESULT: PASS (54 of 54 checks)`
+- [audit-manifest.json](https://github.com/manymoats/cleankpf/blob/main/audit-manifest.json): every result as JSON, each with its own mark; the values the checker compares
+- [Import Repair code](https://github.com/brennandec/import-repair): `node verify-stage.mjs` on a fresh copy prints `ALL 7 FILES VERIFIED (0 secrets detected, clone=pass)`
+
+## Entered
+
+- [README, Entered section](https://github.com/manymoats/cleankpf#entered-contest-entries): four contest entries and their status as the contest pages read on 2026-11-23; no contest win so far
+
+## Recount
+
+- [September loop record](https://github.com/manymoats/cleankpf/blob/main/hackathon/loop-record-2026-09.public.jsonl): 656 posts covering 652 of 722 loop numbers; 164 posts give a suite count with at least one failing test; each row's SHA-256 matches its own text, which shows only that the file agrees with itself, not that the rows date from September
+- [Record guide](https://github.com/manymoats/cleankpf/blob/main/hackathon/README.md): how to check each file in the hackathon folder
+
+## House
+
+- [README, House and Scale sections](https://github.com/manymoats/cleankpf#house-rests-on-the-authors-word): rests on the author's word alone; program credits, counts at private commit 2766acb5b7d8, and Resident State, a local runtime built and not yet released
